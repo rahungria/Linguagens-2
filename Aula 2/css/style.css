@@ -1,0 +1,30 @@
+html {
+    background-color: papayawhip;
+}
+
+main {
+    margin: 10px;
+}
+
+.welcome{
+    background-color: orange;
+    color: blue;
+    font-style: oblique;
+}
+
+.description {
+    background-color: greenyellow;
+    color: red;
+    font-size: larger;
+}
+
+.lista {
+    background-color: honeydew;
+    margin-bottom: 10px;
+}
+
+.lista > li {
+    color: indigo;
+    font-size: large;
+    font-style: oblique;
+}
