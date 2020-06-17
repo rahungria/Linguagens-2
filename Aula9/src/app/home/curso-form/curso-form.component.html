@@ -1,0 +1,36 @@
+<div class="card text-center ">
+  <div class="card-body">
+    <div class="card-text">
+      <form class="mb-0">
+        <div class="form-group mt-0 mb-0">
+          <label for="newCourseName">Nome do Curso</label>
+          <input type="text" class="form-control" id="newCourseName" #newCourseName
+            placeholder="Nome do Curso">
+        </div>
+        <div class="form-group mt-1 mb-0">
+          <label for="newCourseDescription">Descrição do Curso</label>
+          <textarea class="form-control" id="newCourseDescription" rows="3" #newCourseDescription></textarea>
+        </div>
+        <button type="submit" 
+        class="btn btn-primary mt-3" 
+        (click)="createCurso(newCourseName.value, newCourseDescription.value)"
+        >Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- <form class="mb-5">
+  <div class="form-group mt-2 mb-0">
+    <label for="exampleInputEmail1">Nome do Curso</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+      placeholder="Nome do Curso">
+  </div>
+  <div class="form-group mt-1 mb-0">
+    <label for="exampleFormControlTextarea1">Descrição do Curso</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary mt-3">Submit</button>
+</form> -->

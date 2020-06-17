@@ -46,7 +46,7 @@ var GameOver = function () {
 
 var SwitchPlayer = function () {
     if (++roundCounter > 1){
-        GameOver()
+        GameOver();
     }
     else {
         alert("Trocando Jogador");
