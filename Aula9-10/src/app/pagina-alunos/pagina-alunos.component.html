@@ -1,0 +1,41 @@
+<app-aluno-table [alunos]='alunos'></app-aluno-table>
+
+<div class="container">
+  <form 
+  #alunoForm="ngForm"
+  (ngSubmit)="salvar(alunoForm.form.value)">
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <label for="alunoName">Nome</label>
+          <input type="text" class="form-control" id="alunoName" placeholder="Florentina de Jesus"
+          ngModel name="name">
+        </div>
+        <div class="form-group">
+          <label for="alunoAge">Idade</label>
+          <input type="text" class="form-control" id="alunoAge" placeholder="Forever 17" 
+          ngModel name="age">
+        </div>
+        <div class="form-group">
+          <label for="alunoEmail">E-Mail</label>
+          <input type="email" class="form-control" id="alunoEmail" placeholder="FdJ@emailzao.com" 
+          ngModel name="email">
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlSelect1">Curso</label>
+          <select class="form-control" id="exampleFormControlSelect1" 
+          ngModel name="curso">
+            <option value=''>Selecione um Curso</option>
+            <option *ngFor='let curso of cursos'>{{curso}}</option>
+            
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <button type="submit" class="btn btn-primary">Send</button>
+      </div>
+    </div>
+  </form>
+</div>

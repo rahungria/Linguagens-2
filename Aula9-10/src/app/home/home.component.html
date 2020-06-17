@@ -60,7 +60,14 @@
   </div>
   <div class="row">
     <!-- add cards forms -->
-    <button class="btn btn-primary mt-5 mb-5" (click)="showForms()">{{formsShowMoreBtnText}}</button>
+    <button 
+    class="btn mt-5 mb-5" 
+    (click)="showForms()"
+    [ngClass]="{
+      'btn-primary': isFormsHidden,
+      'btn-secondary' : !isFormsHidden
+    }"
+    >{{formsShowMoreBtnText}}</button>
   </div>
   <div class="row">
     <app-curso-form *ngIf="!isFormsHidden" (cursoAdicionado)="onCursoAdicionado($event)"></app-curso-form>
